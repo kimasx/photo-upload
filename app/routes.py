@@ -18,7 +18,7 @@ def upload():
       # return secure version of filename
       filename = secure_filename(img_file.filename)
       # save img file to upload directory
-      img_file.save( os.path.join(app.config['UPLOAD_DIRECTORY'], filename) )
+      img_file.save(os.path.join(app.config['UPLOAD_DIRECTORY'], filename))
       return redirect( url_for('show_photo', file=filename) )
 
 # renders image template
